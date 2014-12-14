@@ -1,0 +1,18 @@
+package transactionBroker;
+
+import javax.swing.JTextField;
+
+public class UserToAdmin_Logic {
+	
+	public static String userToAdmin(JTextField usernameJT) {
+		
+		String username = usernameJT.getText();
+		
+		if (UserData.??? == true) {
+			return "User promoted to Admin";
+		} else {
+			return "User not found";
+		}
+		
+	}
+}
