@@ -1,0 +1,13 @@
+package transactionBroker;
+
+import java.util.ArrayList;
+
+public class ViewCart_Logic {
+
+	public static String deleteCart(ArrayList<String> cart) {
+		
+		cart.clear();
+		
+		return "Cart deleted";
+	}
+}
