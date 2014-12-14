@@ -1,0 +1,11 @@
+package transactionBroker;
+
+import databaseInterface.UserData;
+
+public class SearchResults_Logic {
+
+	public static boolean AddtoCart(String flightNumber) {
+		
+		return UserData.addShopFlights(flightNumber);		
+	}
+}
