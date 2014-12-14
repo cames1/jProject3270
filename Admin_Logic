@@ -1,0 +1,11 @@
+package transactionBroker;
+
+import databaseInterface.UserData;
+
+public class Admin_Logic {
+	
+	public static boolean verification() {
+		
+		return UserData.checkAdmin(Login_Logic.username);
+	}
+}
