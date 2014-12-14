@@ -1,0 +1,15 @@
+package transactionBroker;
+
+import javax.swing.JTextField;
+
+import databaseInterface.Flights;
+
+public class DeleteFlight_Logic {
+
+	public static boolean deleteFlight(JTextField flightNumberJT) {
+		
+		String flightNumber = flightNumberJT.getText();
+		
+		return Flights.deleteFlight(flightNumber);
+	}
+}
