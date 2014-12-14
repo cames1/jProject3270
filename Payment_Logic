@@ -1,0 +1,31 @@
+package transactionBroker;
+
+import java.util.Date;
+
+import javax.swing.JTextField;
+
+import databaseInterface.Flights;
+import databaseInterface.TransactionData;
+
+public class Payment_Logic {
+
+	public static boolean Transactions(JTextField customerIDJT, JTextField flightNumberJT, JTextField creditCardNumberJT) {
+		
+		String customerID = customerIDJT.getText();
+		String flightNumber = flightNumberJT.getText();
+		String creditCardNumber = creditCardNumberJT.getText();
+		
+		Date transactionDate = new Date();
+		
+		int transactionNumber = TransactionData.getTransactionNumber() + 1;
+		
+		int transactionAmount = Flights.getFlightCost() + (Flights.getFlightCost() * (Flights.getFlightTax()/100));
+		
+		//check credit card validation - 16 digits
+		if(creditCardNumber.matches("\\d{16}")) {
+			return TransactionData.addTransaction(transactionNumber, transactionDate.getDate(), customerID, flightNumber, creditCardNumber, transactionAmount);
+		} else {
+			return false;
+		}
+	}
+}
