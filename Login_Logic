@@ -1,0 +1,42 @@
+package transactionBroker;
+
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import databaseInterface.UserData;
+
+public class Login_Logic {
+	
+	public static String username;
+	
+	public static String login(JTextField usernameField, JPasswordField passwordField) {
+		
+		username = usernameField.getText();
+		
+		char[] passwordChar = passwordField.getPassword();
+		StringBuilder s = new StringBuilder();
+		s.append(passwordChar);
+		String password = s.toString();
+		
+		  String dbPassword = UserData.getPassword(username);
+		  
+		  if (dbPassword == null) {
+			  
+		     return "Username does not exist";
+		     
+		  }
+		  
+			System.out.println(dbPassword);
+		 
+		if (password.equals(dbPassword)) {	
+			
+			return "Logged in";
+			
+		} else {
+			
+			return "Password is incorrect";
+			
+		} 
+	}
+
+}
