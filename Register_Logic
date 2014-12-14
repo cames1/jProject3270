@@ -1,0 +1,61 @@
+package transactionBroker;
+
+import databaseInterface.UserData;
+
+public class Register_Logic {
+
+	public static String registration(String username, String password, String firstName, String lastName, String address, String city, String state, String zipString, String email, String SSN, String securityQuestion, String securityAnswer) {
+		
+		int administrator = 0;
+		String ShoppingFlight1 = null;
+		String ShoppingFlight2 = null;
+		String ShoppingFlight3 = null;
+		String ShoppingFlight4 = null;
+		String ShoppingFlight5 = null;
+		String BookedFlight1 = null;
+		String BookedFlight2 = null;
+		String BookedFlight3 = null;
+		String BookedFlight4 = null;
+		String BookedFlight5 = null;
+		
+		if (username.matches(".{4,}") && username.matches("\\w+") && username.matches("\\d+")) {
+		} else {
+			return "Username must have at least 4 alphanumeric characters";
+			
+		} if (password.matches(".{8,}") && password.matches("\\w+") && password.matches("\\d+")) {
+		} else {
+			return "Password must have at least 8 alphanumeric characters";
+			
+		} if (firstName.matches("\\w{2,}")) {
+		} else {
+			return "First name must have at least 2 alphabetical characters";
+			
+		} if (lastName.matches("\\w{2,}")) {
+		} else {
+			return "Last name must have at least 2 alphabetical characters";
+			
+		} if (address.matches(".+") && city.matches("\\w+") && state.matches("\\w+")) {
+		} else {
+			return "Field is blank";
+			
+		} if (zipString.matches("\\d{5}")) {
+		} else {
+			return "Zip code must only have 5 numeric characters";
+			
+		} if (email.matches(".+@.+")) {
+		} else {
+			return "Not a valid email address";
+			
+		} if (SSN.matches("\\d{3}-\\d{2}-\\d{4}")) {
+		} else {
+			return "Social Security Number must follow this format: ###-##-####";	
+		}
+		
+		int zip = Integer.parseInt(zipString);
+		
+		UserData.register(username, password, administrator, firstName, lastName, address, city, 
+				state, zip, email, SSN, securityQuestion, securityAnswer, ShoppingFlight1, ShoppingFlight2, ShoppingFlight3, ShoppingFlight4, ShoppingFlight5, BookedFlight1, BookedFlight2, BookedFlight3, BookedFlight4, BookedFlight5);
+								
+		return "Registered";
+	}
+}
