@@ -1,0 +1,51 @@
+package transactionBroker;
+
+import javax.swing.JTextField;
+
+import databaseInterface.Flights;
+
+public class AddFlightsAdmin_Logic {
+	
+	public static boolean AddFlight(JTextField flightNumberJT, JTextField departureDateTimeJT, 
+									JTextField arrivalDateTimeJT, JTextField layoverAirportJT, 
+									JTextField layoverDurationJT, JTextField departureAirportJT, 
+									JTextField departureCityJT, JTextField departureStateJT, 
+									JTextField departureCountryJT, JTextField destinationCodeJT, 
+									JTextField destinationAirportJT, JTextField destinationCityJT,  
+									JTextField destinationStateJT, JTextField destinationCountryJT, 
+									JTextField applicableTaxJT, JTextField firstClassCapacityJT, 
+									JTextField economyCapacityJT, JTextField firstClassBookedJT, 
+									JTextField planeTypeJT, JTextField firstClassCostJT, 
+									JTextField economyBookedJT, JTextField economyCostJT) {
+		
+		String flightNumber = flightNumberJT.getText();
+		String departureDateTime = departureDateTimeJT.getText();
+		String arrivalDateTime = arrivalDateTimeJT.getText();
+		String layoverAirport = layoverAirportJT.getText();
+		String layoverDuration = layoverDurationJT.getText();
+		String departureAirport = departureAirportJT.getText();
+		String departureCity = departureCityJT.getText();
+		String departureState = departureStateJT.getText();
+		String departureCountry = departureCountryJT.getText();
+		String destinationCode = destinationCodeJT.getText();
+		String destinationAirport = destinationAirportJT.getText();
+		String destinationCity = destinationCityJT.getText();
+		String destinationState = destinationStateJT.getText();
+		String destinationCountry = destinationCountryJT.getText();
+		String applicableTax = applicableTaxJT.getText();
+		String firstClassCapacity = firstClassCapacityJT.getText();
+		String economyCapacity = economyCapacityJT.getText();
+		String firstClassBooked = firstClassBookedJT.getText();
+		String planeType = planeTypeJT.getText();
+		String firstClassCost = firstClassCostJT.getText();
+		String economyBooked = economyBookedJT.getText();
+		String economyCost = economyCostJT.getText();
+		
+		
+		return Flights.addFlight(flightNumber, departureDateTime, arrivalDateTime, layoverAirport, 
+								 layoverDuration, departureAirport, departureCity, departureState, 
+								 departureCountry, destinationAirport, destinationCity, destinationState, 
+								 destinationCountry, applicableTax, firstClassCapacity, economyCapacity, 
+								 firstClassBooked, planeType, firstClassCost, economyBooked, economyCost);
+	}
+}
