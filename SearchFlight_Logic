@@ -6,7 +6,7 @@ import databaseInterface.Flights;
 
 public class SearchFlight_Logic {
 	
-	public static String[] searchFlights(JTextField departureCityJT, JTextField destinationCityJT, JTextField dateJT, 
+	public static String[][] searchFlights(JTextField departureCityJT, JTextField destinationCityJT, JTextField dateJT, 
 			JTextField ticketAmountJT, JTextField airportJT) {
 		
 		String departureCity = departureCityJT.getText();
@@ -15,12 +15,8 @@ public class SearchFlight_Logic {
 		String ticketAmount = ticketAmountJT.getText();
 		String airport = airportJT.getText();
 		
-		
-		
-		String[] flights = Flights.SearchFlights(departureCity, destinationCity, date, ticketAmount, airport);
+		String[][] flights = Flights.SearchFlights(departureCity, destinationCity, date, ticketAmount, airport);
 		
 		return flights;
-
 	}
-	
 }
