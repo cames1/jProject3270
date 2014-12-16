@@ -7,36 +7,36 @@ import databaseInterface.UserData;
 
 public class Login_Logic {
 	
-	public static String username;
+	private static String username;
 	
 	public static String login(JTextField usernameField, JPasswordField passwordField) {
 		
-		username = usernameField.getText();
+		setUsername(usernameField.getText());
 		
 		char[] passwordChar = passwordField.getPassword();
 		StringBuilder s = new StringBuilder();
 		s.append(passwordChar);
 		String password = s.toString();
 		
-		  String dbPassword = UserData.getPassword(username);
+		String dbPassword = UserData.getPassword(getUsername());
 		  
-		  if (dbPassword == null) {
-			  
-		     return "Username does not exist";
-		     
-		  }
-		  
-			System.out.println(dbPassword);
+		if (dbPassword == null) {
+		   return "Username does not exist";
+		}
 		 
 		if (password.equals(dbPassword)) {	
-			
 			return "Logged in";
-			
 		} else {
-			
 			return "Password is incorrect";
-			
 		} 
+	}
+
+	public static String getUsername() {
+		return username;
+	}
+
+	public static void setUsername(String username) {
+		Login_Logic.username = username;
 	}
 
 }
