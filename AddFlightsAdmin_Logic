@@ -7,15 +7,15 @@ import databaseInterface.Flights;
 public class AddFlightsAdmin_Logic {
 	
 	public static boolean AddFlight(JTextField flightNumberJT, JTextField departureDateTimeJT, 
-									JTextField arrivalDateTimeJT, JTextField layoverAirportJT, 
-									JTextField layoverDurationJT, JTextField departureAirportJT, 
-									JTextField departureCityJT, JTextField departureStateJT, 
-									JTextField departureCountryJT, JTextField destinationCodeJT, 
-									JTextField destinationAirportJT, JTextField destinationCityJT,  
-									JTextField destinationStateJT, JTextField destinationCountryJT, 
-									JTextField applicableTaxationPercentJT, JTextField capacityJT, 
-									JTextField planeTypeJT, JTextField bookedJT, 
-									JTextField costJT) {
+					JTextField arrivalDateTimeJT, JTextField layoverAirportJT, 
+					JTextField layoverDurationJT, JTextField departureAirportJT, 
+					JTextField departureCityJT, JTextField departureStateJT, 
+					JTextField departureCountryJT, JTextField destinationCodeJT, 
+					JTextField destinationAirportJT, JTextField destinationCityJT,  
+					JTextField destinationStateJT, JTextField destinationCountryJT, 
+					JTextField applicableTaxationPercentJT, JTextField capacityJT, 
+					JTextField planeTypeJT, JTextField bookedJT, 
+					JTextField costJT) {
 		
 		String flightNumber = flightNumberJT.getText();
 		String departureDateTime = departureDateTimeJT.getText();
@@ -38,14 +38,14 @@ public class AddFlightsAdmin_Logic {
 		String cost = costJT.getText();
 
 		return Flights.addFlight(flightNumber, departureDateTime, arrivalDateTime,
-								 layoverAirport, layoverDuration,
-								 departureAirport, departureCity,
-								 departureState, departureCountry,
-								 destinationCode, destinationAirport,
-								 destinationCity, destinationState,
-								 destinationCountry, applicableTaxationPercent,
-								 capacity, planeType,
-								 booked, cost);
+					layoverAirport, layoverDuration,
+					departureAirport, departureCity,
+					departureState, departureCountry,
+					destinationCode, destinationAirport,
+					destinationCity, destinationState,
+					destinationCountry, applicableTaxationPercent,
+					capacity, planeType,
+					booked, cost);
 
 	}
 }
