@@ -37,16 +37,15 @@ public class AddFlightsAdmin_Logic {
 		String booked = bookedJT.getText();
 		String cost = costJT.getText();
 
-		
 		return Flights.addFlight(flightNumber, departureDateTime, arrivalDateTime,
-				layoverAirport, layoverDuration,
-				departureAirport, departureCity,
-				departureState, departureCountry,
-				destinationCode, destinationAirport,
-				destinationCity, destinationState,
-				destinationCountry, applicableTaxationPercent,
-				capacity, planeType,
-				booked, cost);
+								 layoverAirport, layoverDuration,
+								 departureAirport, departureCity,
+								 departureState, departureCountry,
+								 destinationCode, destinationAirport,
+								 destinationCity, destinationState,
+								 destinationCountry, applicableTaxationPercent,
+								 capacity, planeType,
+								 booked, cost);
 
 	}
 }
