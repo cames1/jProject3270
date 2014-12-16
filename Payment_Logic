@@ -9,6 +9,7 @@ import databaseInterface.TransactionData;
 
 public class Payment_Logic {
 
+	@SuppressWarnings("deprecation")
 	public static boolean Transactions(JTextField customerIDJT, JTextField flightNumberJT, JTextField creditCardNumberJT) {
 		
 		String customerID = customerIDJT.getText();
@@ -19,7 +20,7 @@ public class Payment_Logic {
 		
 		int transactionNumber = TransactionData.getTransactionNumber() + 1;
 		
-		int transactionAmount = Flights.getFlightCost() + (Flights.getFlightCost() * (Flights.getFlightTax()/100));
+		int transactionAmount = Flights.getFlightCost(flightNumber) + (Flights.getFlightCost(flightNumber) * (Flights.getFlightTax(flightNumber))/100);
 		
 		//check credit card validation - 16 digits
 		if(creditCardNumber.matches("\\d{16}")) {
