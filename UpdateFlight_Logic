@@ -6,115 +6,112 @@ import databaseInterface.Flights;
 
 public class UpdateFlight_Logic {
 	
-	public static boolean updateFlightNumber(JTextField flightNumberJT){
+	public static boolean updateFlightNumber(JTextField flightNumberJT, JTextField newFlightNumberJT){
 		String flightNumber = flightNumberJT.getText();
-		return Flights.updateFlightNumber(flightNumber);
+		String newFlightNumber = newFlightNumberJT.getText();
+		return Flights.updateFlightNumber(flightNumber, newFlightNumber);
 	}
 	
-	public static boolean updateDepartureDateTime(JTextField departureDateTimeJT){
-		String departureDateTime = departureDateTimeJT.getText();
-		return Flights.updateDepartureDateTime(departureDateTime);
+	public static boolean updateDepartureDateTime(JTextField flightNumberJT, JTextField newDepartureDateTimeJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDepartureDateTime = newDepartureDateTimeJT.getText();
+		return Flights.updateDepartureDateTime(flightNumber, newDepartureDateTime);
 	}
 	
-	public static boolean updateArrivalDateTime(JTextField arrivalDateTimeJT){
-		String arrivalDateTime = arrivalDateTimeJT.getText();
-		return Flights.updateArrivalDateTime(arrivalDateTime);
+	public static boolean updateArrivalDateTime(JTextField flightNumberJT, JTextField newArrivalDateTimeJT){
+		String flightNumber = flightNumberJT.getText();
+		String newArrivalDateTime = newArrivalDateTimeJT.getText();
+		return Flights.updateArrivalDateTime(flightNumber, newArrivalDateTime);
 	}
 	
-	public static boolean updateLayoverAirport(JTextField layoverAirportJT){
-		String layoverAirport = layoverAirportJT.getText();
-		return Flights.updateLayoverAirport(layoverAirport);
+	public static boolean updateLayoverAirport(JTextField flightNumberJT, JTextField newLayoverAirportJT){
+		String flightNumber = flightNumberJT.getText();
+		String newLayoverAirport = newLayoverAirportJT.getText();
+		return Flights.updateLayoverAirport(flightNumber, newLayoverAirport);
 	}
 	
-	public static boolean updateLayoverDuration(JTextField layoverDurationJT){
-		String layoverDuration = layoverDurationJT.getText();
-		return Flights.updateLayoverDuration(layoverDuration);
+	public static boolean updateLayoverDuration(JTextField flightNumberJT, JTextField newLayoverDurationJT){
+		String flightNumber = flightNumberJT.getText();
+		String newLayoverDuration = newLayoverDurationJT.getText();
+		return Flights.updateLayoverDuration(flightNumber, newLayoverDuration);
 	}
 	
-	public static boolean updateDepartureAirport(JTextField departureAirportJT){
-		String departureAirport = departureAirportJT.getText();
-		return Flights.updateDepartureAirport(departureAirport);
+	public static boolean updateDepartureAirport(JTextField flightNumberJT, JTextField newDepartureAirportJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDepartureAirport = newDepartureAirportJT.getText();
+		return Flights.updateDepartureAirport(flightNumber, newDepartureAirport);
 	}
 	
-	public static boolean updateDepartureCity(JTextField departureCityJT){
-		String departureCity = departureCityJT.getText();
-		return Flights.updateDepartureCity(departureCity);
+	public static boolean updateDepartureCity(JTextField flightNumberJT, JTextField newDepartureCityJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDepartureCity = newDepartureCityJT.getText();
+		return Flights.updateDepartureCity(flightNumber, newDepartureCity);
 	}
 	
-	public static boolean updateDepartureState(JTextField departureStateJT){
-		String departureState = departureStateJT.getText();
-		return Flights.updateDepartureState(departureState);
+	public static boolean updateDepartureState(JTextField flightNumberJT, JTextField newDepartureStateJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDepartureState = newDepartureStateJT.getText();
+		return Flights.updateDepartureState(flightNumber, newDepartureState);
 	}
 	
-	public static boolean updateDepartureCountry(JTextField departureCountryJT){
-		String departureCountry = departureCountryJT.getText();
-		return Flights.updateDepartureCountry(departureCountry);
+	public static boolean updateDepartureCountry(JTextField flightNumberJT, JTextField newDepartureCountryJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDepartureCountry = newDepartureCountryJT.getText();
+		return Flights.updateDepartureCountry(flightNumber, newDepartureCountry);
 	}
 	
-	public static boolean updateDestinationCode(JTextField destinationCodeJT){
-		String destinationCode = destinationCodeJT.getText();
-		return Flights.updateDestinationCode(destinationCode);
+	public static boolean updateDestinationCode(JTextField flightNumberJT, JTextField newDestinationCodeJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDestinationCode = newDestinationCodeJT.getText();
+		return Flights.updateDestinationCode(flightNumber, newDestinationCode);
+	}
+		
+	public static boolean updateDestinationCity(JTextField flightNumberJT, JTextField newDestinationCityJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDestinationCity = newDestinationCityJT.getText();
+		return Flights.updateDestinationCity(flightNumber, newDestinationCity);
 	}
 	
-	public static boolean updateDestinationAirport(JTextField destinationAirportJT){
-		String destinationAirport = destinationAirportJT.getText();
-		return Flights.updateDestinationAirport(destinationAirport);
+	public static boolean updateDestinationState(JTextField flightNumberJT, JTextField newDestinationStateJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDestinationState = newDestinationStateJT.getText();
+		return Flights.updateDestinationState(flightNumber, newDestinationState);
 	}
 	
-	public static boolean updateDestinationCity(JTextField destinationCityJT){
-		String destinationCity = destinationCityJT.getText();
-		return Flights.updateDestinationCity(destinationCity);
+	public static boolean updateDestinationCountry(JTextField flightNumberJT, JTextField newDestinationCountryJT){
+		String flightNumber = flightNumberJT.getText();
+		String newDestinationCountry = newDestinationCountryJT.getText();
+		return Flights.updateDestinationCountry(flightNumber, newDestinationCountry);
 	}
 	
-	public static boolean updateDestinationState(JTextField destinationStateJT){
-		String destinationState = destinationStateJT.getText();
-		return Flights.updateDestinationState(destinationState);
-	}
-	
-	public static boolean updateDestinationCountry(JTextField destinationCountryJT){
-		String destinationCountry = destinationCountryJT.getText();
-		return Flights.updateDestinationCountry(destinationCountry);
-	}
-	
-	public static boolean updateApplicableTax(JTextField applicableTaxJT){
-		String applicableTax = applicableTaxJT.getText();
-		return Flights.updateApplicableTax(applicableTax);
-	}
-	
-	public static boolean updateFirstClassCapacity(JTextField firstClassCapacityJT){
-		String firstClassCapacity = firstClassCapacityJT.getText();
-		return Flights.updateFirstClassCapacity(firstClassCapacity);
+	public static boolean updateApplicableTax(JTextField flightNumberJT, JTextField newApplicableTaxationPercentJT){
+		String flightNumber = flightNumberJT.getText();
+		String newApplicableTaxationPercent = newApplicableTaxationPercentJT.getText();
+		return Flights.updateApplicableTaxationPercent(flightNumber, newApplicableTaxationPercent);
 	}
 
-	
-	public static boolean updateEconomyCapacity(JTextField economyCapacityJT){
-		String economyCapacity = economyCapacityJT.getText();
-		return Flights.updateEconomyCapacity(economyCapacity);
+	public static boolean updateEconomyCapacity(JTextField flightNumberJT, JTextField newCapacityJT){
+		String flightNumber = flightNumberJT.getText();
+		String newCapacity = newCapacityJT.getText();
+		return Flights.updateCapacity(flightNumber, newCapacity);
 	}
 	
-	public static boolean updateFirstClassBooked(JTextField firstClassBookedJT){
-		String firstClassBooked = firstClassBookedJT.getText();
-		return Flights.updateFirstClassBooked(firstClassBooked);
+	public static boolean updatePlaneType(JTextField flightNumberJT, JTextField newPlaneTypeJT){
+		String flightNumber = flightNumberJT.getText();
+		String newPlaneType = newPlaneTypeJT.getText();
+		return Flights.updatePlaneType(flightNumber, newPlaneType);
 	}
 	
-	public static boolean updatePlaneType(JTextField planeTypeJT){
-		String planeType = planeTypeJT.getText();
-		return Flights.updatePlaneType(planeType);
+	public static boolean updateEconomyBooked(JTextField flightNumberJT, JTextField newBookedJT){
+		String flightNumber = flightNumberJT.getText();
+		String newBooked = newBookedJT.getText();
+		return Flights.updateBooked(flightNumber, newBooked);
 	}
 	
-	public static boolean updateFirstClassCost(JTextField firstClassCostJT){
-		String firstClassCost = firstClassCostJT.getText();
-		return Flights.updateFirstClassCost(firstClassCost);
-	}
-	
-	public static boolean updateEconomyBooked(JTextField economyBookedJT){
-		String economyBooked = economyBookedJT.getText();
-		return Flights.updateEconomyBooked(economyBooked);
-	}
-	
-	public static boolean updateEconomyCost(JTextField economyCostJT){
-		String economyCost = economyCostJT.getText();
-		return Flights.updateEconomyCost(economyCost);
+	public static boolean updateEconomyCost(JTextField flightNumberJT, JTextField newCostJT){
+		String flightNumber = flightNumberJT.getText();
+		String newCost = newCostJT.getText();
+		return Flights.updateEconomyCost(flightNumber, newCost);
 	}
 	
 }
