@@ -4,8 +4,8 @@ import databaseInterface.UserData;
 
 public class Admin_Logic {
 	
-	public static boolean verification() {
+	public static boolean verification(String username) {
 		
-		return UserData.checkAdmin(Login_Logic.username);
+		return UserData.checkAdmin(Login_Logic.getUsername());
 	}
 }
