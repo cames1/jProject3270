@@ -1,12 +1,12 @@
 package transactionBroker;
 
-import java.util.ArrayList;
+import databaseInterface.UserData;
 
 public class ViewCart_Logic {
 
-	public static String deleteCart(ArrayList<String> cart) {
+	public static String deleteCart(String username) {
 		
-		cart.clear();
+		UserData.clearCart(username);
 		
 		return "Cart deleted";
 	}
