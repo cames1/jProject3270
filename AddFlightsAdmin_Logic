@@ -13,10 +13,9 @@ public class AddFlightsAdmin_Logic {
 									JTextField departureCountryJT, JTextField destinationCodeJT, 
 									JTextField destinationAirportJT, JTextField destinationCityJT,  
 									JTextField destinationStateJT, JTextField destinationCountryJT, 
-									JTextField applicableTaxJT, JTextField firstClassCapacityJT, 
-									JTextField economyCapacityJT, JTextField firstClassBookedJT, 
-									JTextField planeTypeJT, JTextField firstClassCostJT, 
-									JTextField economyBookedJT, JTextField economyCostJT) {
+									JTextField applicableTaxationPercentJT, JTextField capacityJT, 
+									JTextField planeTypeJT, JTextField bookedJT, 
+									JTextField costJT) {
 		
 		String flightNumber = flightNumberJT.getText();
 		String departureDateTime = departureDateTimeJT.getText();
@@ -32,20 +31,22 @@ public class AddFlightsAdmin_Logic {
 		String destinationCity = destinationCityJT.getText();
 		String destinationState = destinationStateJT.getText();
 		String destinationCountry = destinationCountryJT.getText();
-		String applicableTax = applicableTaxJT.getText();
-		String firstClassCapacity = firstClassCapacityJT.getText();
-		String economyCapacity = economyCapacityJT.getText();
-		String firstClassBooked = firstClassBookedJT.getText();
+		String applicableTaxationPercent = applicableTaxationPercentJT.getText();
+		String capacity = capacityJT.getText();
 		String planeType = planeTypeJT.getText();
-		String firstClassCost = firstClassCostJT.getText();
-		String economyBooked = economyBookedJT.getText();
-		String economyCost = economyCostJT.getText();
+		String booked = bookedJT.getText();
+		String cost = costJT.getText();
+
 		
-		
-		return Flights.addFlight(flightNumber, departureDateTime, arrivalDateTime, layoverAirport, 
-								 layoverDuration, departureAirport, departureCity, departureState, 
-								 departureCountry, destinationAirport, destinationCity, destinationState, 
-								 destinationCountry, applicableTax, firstClassCapacity, economyCapacity, 
-								 firstClassBooked, planeType, firstClassCost, economyBooked, economyCost);
+		return Flights.addFlight(flightNumber, departureDateTime, arrivalDateTime,
+				layoverAirport, layoverDuration,
+				departureAirport, departureCity,
+				departureState, departureCountry,
+				destinationCode, destinationAirport,
+				destinationCity, destinationState,
+				destinationCountry, applicableTaxationPercent,
+				capacity, planeType,
+				booked, cost);
+
 	}
 }
